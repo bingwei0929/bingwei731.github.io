@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="always">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="冰威茶话会 - 历史回顾">
+    <meta property="og:description" content="历史事件回顾与和平思考">
+    <title>冰威茶话会 - 历史回顾</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#ef4444',
+                        light: '#f1f5f9',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                        display: ['Noto Serif SC', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            }
+            .text-shadow-lg {
+                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+            }
+            .bg-glass {
+                background: rgba(15, 23, 42, 0.6);
+                backdrop-filter: blur(12px);
+            }
+            .page-transition {
+                transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            }
+            .history-timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -29px;
+                top: 0;
+                height: 100%;
+                width: 2px;
+                background-color: rgba(239, 68, 68, 0.5);
+            }
+            .history-timeline-item::after {
+                content: '';
+                position: absolute;
+                left: -35px;
+                top: 8px;
+                height: 14px;
+                width: 14px;
+                border-radius: 50%;
+                background-color: #ef4444;
+            }
+            .animate-fade-in {
+                animation: fadeIn 1s ease-out forwards;
+            }
+            .animate-slide-up {
+                animation: slideUp 0.8s ease-out forwards;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-light overflow-x-hidden bg-primary">
+    <!-- 动态背景 -->
+    <div id="dynamic-bg" class="fixed inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary via-secondary to-black opacity-90"></div>
+        <div class="absolute inset-0 bg-[url('https://picsum.photos/id/1036/1920/1080')] bg-cover bg-center opacity-20"></div>
+    </div>
+
+    <!-- 翻页容器 -->
+    <div class="relative h-screen preserve-3d overflow-hidden">
+        <!-- 第1页：封面 -->
+        <div id="page-1" class="absolute inset-0 page-transition transform-gpu">
+            <div class="h-full flex flex-col justify-between px-4 z-10 relative">
+                <!-- 顶部装饰 -->
+                <div class="w-full py-6 flex justify-center">
+                    <div class="w-24 h-1 bg-accent/70 rounded-full"></div>
+                </div>
+
+                <!-- 主要内容 -->
+                <div class="flex-1 flex flex-col justify-center">
+                    <!-- 大标题 - 保留"冰威茶话会" -->
+                    <div class="mb-10 animate-fade-in">
+                        <h1 class="font-display font-black text-[clamp(2.5rem,12vw,6rem)] text-white leading-none text-shadow-lg tracking-tighter text-center">
+                            冰威茶话会
+                        </h1>
+                        <div class="w-48 h-1 bg-accent mx-auto mx-auto mt-3"></div>
+                    </div>
+
+                    <!-- 主题 -->
+                    <div class="max-w-4xl mx-auto animate-slide-up" style="animation-delay: 0.5s">
+                        <h2 class="text-[clamp(1.5rem,4vw,2.8rem)] font-bold mb-6 text-shadow text-center">
+                            历史回顾与和平思考
+                        </h2>
+                        <p class="text-[clamp(0.9rem,2.5vw,1.2rem)] text-gray-300 mb-10 max-w-2xl mx-auto text-center">
+                            铭记历史 · 珍惜和平 · 共创未来
+                        </p>
+                    </div>
+
+                    <!-- 时间线摘要 -->
+                    <div class="max-w-3xl mx-auto mb-12 animate-slide-up" style="animation-delay: 0.8s">
+                        <div class="relative pl-10 ml-6 space-y-8">
+                            <div class="history-timeline-item relative">
+                                <h3 class="text-lg md:text-xl font-bold text-accent mb-2">1935年</h3>
+                                <p class="text-gray-300 text-sm md:text-base">日本在哈尔滨建立秘密军事单位</p>
+                            </div>
+                            <div class="history-timeline-item relative">
+                                <h3 class="text-lg md:text-xl font-bold text-accent mb-2">1937-1945年</h3>
+                                <p class="text-gray-300 text-sm md:text-base">二战期间相关历史事件发生</p>
+                            </div>
+                            <div class="history-timeline-item relative">
+                                <h3 class="text-lg md:text-xl font-bold text-accent mb-2">历史启示</h3>
+                                <p class="text-gray-300 text-sm md:text-base">铭记历史，维护世界和平与正义</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 翻页提示 -->
+                <div class="pb-16 text-center animate-bounce">
+                    <button id="next-to-page-2" class="text-white/80 hover:text-white transition-colors duration-300 flex flex-col items-center mx-auto">
+                        <span class="mb-2 text-sm md:text-base">了解更多</span>
+                        <i class="fa fa-chevron-down text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第2页：历史事实 -->
+        <div id="page-2" class="absolute inset-0 page-transition transform-gpu translate-x-full">
+            <div class="h-full flex flex-col">
+                <!-- 页头 -->
+                <div class="p-4 md:p-6 bg-glass border-b border-white/10">
+                    <h2 class="text-[clamp(1.3rem,3vw,2rem)] font-display font-bold">历史事实</h2>
+                </div>
+
+                <!-- 内容区 -->
+                <div class="flex-1 overflow-y-auto p-4 md:p-6">
+                    <div class="max-w-6xl mx-auto space-y-10 md:space-y-16">
+                        <!-- 历史概述 -->
+                        <div class="animate-slide-up">
+                            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10 items-center">
+                                <div>
+                                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-accent">历史背景</h3>
+                                    <p class="text-gray-300 mb-3 leading-relaxed text-sm md:text-base">
+                                        20世纪30-40年代，日本在第二次世界大战期间，在中国东北建立了代号为"731"的秘密部队，对外称"关东军防疫给水部"。
+                                    </p>
+                                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                                        该部队1935年正式建立，总部位于哈尔滨平房区，是当时规模庞大的生物武器研究基地，相关行为违反了国际人道主义法。
+                                    </p>
+                                </div>
+                                <div class="relative rounded-xl overflow-hidden shadow-2xl">
+                                    <img src="https://picsum.photos/id/1019/800/600" alt="历史遗迹照片" class="w-full h-auto">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 历史证据 -->
+                        <div class="animate-slide-up" style="animation-delay: 0.2s">
+                            <h3 class="text-xl md:text-2xl font-bold mb-6 text-accent text-center">历史见证</h3>
+                            <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+                                <div class="bg-glass p-5 rounded-xl border border-white/10 shadow-lg">
+                                    <div class="text-accent text-3xl mb-4 text-center">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <h4 class="text-base md:text-xl font-bold mb-3 text-center">遗址证据</h4>
+                                    <p class="text-gray-300 text-center text-xs md:text-sm">
+                                        哈尔滨平房区保存了大量历史遗迹，是历史事实的直接见证。
+                                    </p>
+                                </div>
+
+                                <div class="bg-glass p-5 rounded-xl border border-white/10 shadow-lg">
+                                    <div class="text-accent text-3xl mb-4 text-center">
+                                        <i class="fa fa-file-text-o"></i>
+                                    </div>
+                                    <h4 class="text-base md:text-xl font-bold mb-3 text-center">文献记录</h4>
+                                    <p class="text-gray-300 text-center text-xs md:text-sm">
+                                        大量历史文献和战后证词，记录了相关历史事件。
+                                    </p>
+                                </div>
+
+                                <div class="bg-glass p-5 rounded-xl border border-white/10 shadow-lg">
+                                    <div class="text-accent text-3xl mb-4 text-center">
+                                        <i class="fa fa-comments-o"></i>
+                                    </div>
+                                    <h4 class="text-base md:text-xl font-bold mb-3 text-center">证人证词</h4>
+                                    <p class="text-gray-300 text-center text-xs md:text-sm">
+                                        幸存者和相关人员的证词，还原了当时的历史情况。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 翻页控制 -->
+                <div class="p-4 md:p-6 bg-glass border-t border-white/10 flex justify-between items-center">
+                    <button id="back-to-page-1" class="text-white/80 hover:text-white transition-colors duration-300 flex items-center">
+                        <i class="fa fa-chevron-left mr-2"></i>
+                        <span class="text-sm">返回</span>
+                    </button>
+                    <button id="next-to-page-3" class="text-white/80 hover:text-white transition-colors duration-300 flex items-center">
+                        <span class="text-sm">和平启示</span>
+                        <i class="fa fa-chevron-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第3页：和平启示 -->
+        <div id="page-3" class="absolute inset-0 page-transition transform-gpu translate-x-full">
+            <div class="h-full flex flex-col">
+                <!-- 页头 -->
+                <div class="p-4 md:p-6 bg-glass border-b border-white/10">
+                    <h2 class="text-[clamp(1.3rem,3vw,2rem)] font-display font-bold">和平启示</h2>
+                </div>
+
+                <!-- 内容区 -->
+                <div class="flex-1 overflow-y-auto p-4 md:p-6">
+                    <div class="max-w-6xl mx-auto space-y-10 md:space-y-16">
+                        <!-- 铭记的意义 -->
+                        <div class="animate-slide-up">
+                            <h3 class="text-xl md:text-2xl font-bold mb-6 text-accent text-center">铭记历史的意义</h3>
+
+                            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+                                <div>
+                                    <p class="text-gray-300 mb-4 leading-relaxed text-sm md:text-base">
+                                        我们铭记这段历史，不是为了延续仇恨，而是为了以史为鉴，警惕战争悲剧重演，珍惜当下的和平生活。
+                                    </p>
+                                    <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                                        只有正视历史、铭记历史，才能避免历史悲剧的重演，才能构建一个更加公正、和平的世界。
+                                    </p>
+                                </div>
+                                <div class="relative rounded-xl overflow-hidden shadow-2xl">
+                                    <img src="https://picsum.photos/id/1048/800/600" alt="和平纪念" class="w-full h-auto">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 行动方向 -->
+                        <div class="animate-slide-up" style="animation-delay: 0.3s">
+                            <h3 class="text-xl md:text-2xl font-bold mb-8 text-accent text-center">以史为鉴 开创未来</h3>
+
+                            <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+                                <div class="bg-glass p-6 rounded-xl border border-white/10 shadow-lg">
+                                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fa fa-flag text-accent text-3xl"></i>
+                                    </div>
+                                    <h4 class="text-base font-bold mb-3 text-center">传承爱国精神</h4>
+                                    <p class="text-gray-300 text-center text-xs md:text-sm">
+                                        凝聚民族力量，为国家的强大和民族的复兴而努力。
+                                    </p>
+                                </div>
+
+                                <div class="bg-glass p-6 rounded-xl border border-white/10 shadow-lg">
+                                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fa fa-graduation-cap text-accent text-3xl"></i>
+                                    </div>
+                                    <h4 class="text-base font-bold mb-3 text-center">追求科学真理</h4>
+                                    <p class="text-gray-300 text-center text-xs md:text-sm">
+                                        推动科学进步，坚守伦理底线，服务人类福祉。
+                                    </p>
+                                </div>
+
+                                <div class="bg-glass p-6 rounded-xl border border-white/10 shadow-lg">
+                                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                        <i class="fa fa-handshake-o text-accent text-3xl"></i>
+                                    </div>
+                                    <h4 class="text-base font-bold mb-3 text-center">维护世界和平</h4>
+                                    <p class="text-gray-300 text-center text-xs md:text-sm">
+                                        促进世界和平与发展，反对任何形式的侵略行为。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 结语 -->
+                        <div class="animate-slide-up" style="animation-delay: 0.6s">
+                            <div class="bg-glass p-6 md:p-10 rounded-xl border border-white/10 shadow-xl">
+                                <h3 class="text-xl md:text-2xl font-bold mb-6 text-center">珍惜和平 开创未来</h3>
+                                <p class="text-gray-300 text-center max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                                    铭记历史，不是为了沉湎于过去的苦难，而是为了从中汲取力量，开创更加美好的未来。
+                                    作为新时代的中国人，我们应当传承民族精神，为实现中华民族伟大复兴贡献自己的力量，
+                                    让历史的悲剧永远不再重演。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 翻页控制 -->
+                <div class="p-4 md:p-6 bg-glass border-t border-white/10 flex justify-center">
+                    <button id="back-to-cover" class="text-white/80 hover:text-white transition-colors duration-300 flex items-center">
+                        <span class="text-sm">返回首页</span>
+                        <i class="fa fa-home ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚信息 -->
+    <footer class="fixed bottom-3 left-0 right-0 text-center text-gray-500 text-xs z-20 pointer-events-none">
+        <p>© 冰威茶话会</p>
+    </footer>
+
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 翻页功能
+            setupPageNavigation();
+        });
+
+        // 翻页导航功能
+        function setupPageNavigation() {
+            // 页面元素
+            const page1 = document.getElementById('page-1');
+            const page2 = document.getElementById('page-2');
+            const page3 = document.getElementById('page-3');
+
+            // 按钮元素
+            const nextToPage2 = document.getElementById('next-to-page-2');
+            const backToPage1 = document.getElementById('back-to-page-1');
+            const nextToPage3 = document.getElementById('next-to-page-3');
+            const backToCover = document.getElementById('back-to-cover');
+
+            // 翻页到第2页
+            nextToPage2.addEventListener('click', () => {
+                page1.style.transform = 'translateX(-100%)';
+                page2.style.transform = 'translateX(0)';
+                resetAnimations(page2);
+            });
+
+            // 返回第1页
+            backToPage1.addEventListener('click', () => {
+                page1.style.transform = 'translateX(0)';
+                page2.style.transform = 'translateX(100%)';
+            });
+
+            // 翻页到第3页
+            nextToPage3.addEventListener('click', () => {
+                page2.style.transform = 'translateX(-100%)';
+                page3.style.transform = 'translateX(0)';
+                resetAnimations(page3);
+            });
+
+            // 返回封面
+            backToCover.addEventListener('click', () => {
+                page1.style.transform = 'translateX(0)';
+                page3.style.transform = 'translateX(100%)';
+                page2.style.transform = 'translateX(100%)';
+            });
+
+            // 重置页面动画
+            function resetAnimations(page) {
+                const animatedElements = page.querySelectorAll('.animate-slide-up, .animate-fade-in');
+                animatedElements.forEach(el => {
+                    el.style.opacity = '0';
+                    if (el.classList.contains('animate-slide-up')) {
+                        el.style.transform = 'translateY(50px)';
+                    }
+
+                    // 强制重绘
+                    void el.offsetWidth;
+
+                    // 重新启用动画
+                    el.style.opacity = '';
+                    el.style.transform = '';
+                });
+            }
+        }
+    </script>
+</body>
+</html>
